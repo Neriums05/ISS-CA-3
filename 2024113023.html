@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Camera -->
+      <a-entity camera position="0 4 6" look-controls></a-entity>
+
+      <!-- Ground -->
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+
+      <!-- Base box (large) -->
+      <a-box position="0 1 -4" width="2" height="1.5" depth="2" color="#4CC3D9"></a-box>
+
+      <!-- Middle box (just touching the base box) -->
+      <a-box position="0 2.5 -4" width="1.5" height="1" depth="1.5" color="#F16745"></a-box>
+
+      <!-- Tetrahedron touching the middle box -->
+      <a-entity geometry="primitive: tetrahedron" position="0 3.5 -4" scale="0.6 0.6 0.6" color="#32CD32"></a-entity>
+
+      <!-- Octahedron touching the tetrahedron -->
+      <a-entity geometry="primitive: octahedron" position="0 4.5 -4" scale="0.5 0.5 0.5" color="#FF6347"></a-entity>
+
+      <!-- Cone touching the octahedron -->
+      <a-cone position="0 5.5 -4" radius-bottom="0.7" radius-top="0.05" height="1" color="#7B5FCB"></a-cone>
+    </a-scene>
+
+  </body>
+</html>
